@@ -1,0 +1,18 @@
+spring:
+  redis:
+    database: 0                 # Redis数据库索引（默认为0）
+    host: 127.0.0.1             # Redis服务器地址
+    port: 6379                  # Redis服务器连接端口
+    password:                   # Redis服务器连接密码（默认为空）
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-wait:
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+    multi:
+      useRedis: false
+
